@@ -1,8 +1,9 @@
 import React, {useState} from "react";
 import Controls from "./components/Controls.tsx";
 import Navbar from "./components/Navbar.tsx";
-import Iphone from "./components/Iphone.tsx";
+// import Iphone from "./components/Iphone.tsx";
 // import Home from "./components/Home.tsx";
+import Macbook from "./components/Macbook.tsx"
 
 const App: React.FC = () => {
     const [frameZoom, setFrameZoom] = useState<boolean>(false);
@@ -24,7 +25,8 @@ const App: React.FC = () => {
                 <Navbar activePage={activePage} handleNavClick={handleNavClick}/>
                 <div className='grow'>
                     {/*<Home/>*/}
-                    <Iphone/>
+                    {/*<Iphone/>*/}
+                    <Macbook/>
                 </div>
             </div>
         </div>
