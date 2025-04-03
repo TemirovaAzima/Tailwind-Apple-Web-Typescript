@@ -16,6 +16,9 @@ const App: React.FC = () => {
         setFrameZoom(!frameZoom)
     };
 
+    const resetPage = (): void => {
+        setActivePage(0)
+    }
     const handleNavClick = (pageIndex: number): void => {
         setActivePage(pageIndex)
     }
@@ -24,7 +27,7 @@ const App: React.FC = () => {
             <div className={` ${frameZoom ? 'min-w-[97vw] min-h-[97vh]' : 'min-w-[70vw] min-h-[85vh]'} w-[70vw] h-[85vh] max-w-[90vw] max-h-[90vh]
                  border border-gray-200 resize overflow-auto rounded-2xl relative flex transition-all duration-300
               `}>
-                <Controls frameZoom={frameZoom} toggleZoom={toggleZoom}/>
+                <Controls frameZoom={frameZoom} toggleZoom={toggleZoom} resetPage={resetPage} activePage={activePage}/>
                 <Navbar activePage={activePage} handleNavClick={handleNavClick}/>
                 <div className='grow'>
                     <PageTransition activePage={activePage}>
