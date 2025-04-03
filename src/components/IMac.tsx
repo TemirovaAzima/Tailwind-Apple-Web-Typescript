@@ -8,7 +8,7 @@ const IMac: React.FC = () => {
     const getCurrentModel = (): ImacModelsType | undefined => imacModels.find((model) => model.label.toLowerCase() === selectedColor);
 
     // Handle the case where no model is found
-    if(!getCurrentModel) return <div className={`text-red-500 text-center`}>Model not found</div>
+    if (!getCurrentModel) return <div className={`text-red-500 text-center`}>Model not found</div>
 
     return (
         <div className={`h-full grid grid-cols-2 grid-rows-2 md:gap-4 gap-1 bg-white relative `}>

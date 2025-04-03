@@ -1,11 +1,12 @@
 import React, {useState} from "react";
 import Controls from "./components/Controls.tsx";
 import Navbar from "./components/Navbar.tsx";
-// import Watch from "./components/Watch.tsx";
-// import Iphone from "./components/Iphone.tsx";
-// import Home from "./components/Home.tsx";
-// import Macbook from "./components/Macbook.tsx"
+import Watch from "./components/Watch.tsx";
+import Iphone from "./components/Iphone.tsx";
+import Home from "./components/Home.tsx";
+import Macbook from "./components/Macbook.tsx"
 import IMac from './components/IMac.tsx'
+import PageTransition from "./components/PageTransition.tsx";
 
 const App: React.FC = () => {
     const [frameZoom, setFrameZoom] = useState<boolean>(false);
@@ -26,11 +27,13 @@ const App: React.FC = () => {
                 <Controls frameZoom={frameZoom} toggleZoom={toggleZoom}/>
                 <Navbar activePage={activePage} handleNavClick={handleNavClick}/>
                 <div className='grow'>
-                    {/*<Home/>*/}
-                    {/*<Iphone/>*/}
-                    {/*<Macbook/>*/}
-                    {/*<Watch/>*/}
-                    <IMac/>
+                    <PageTransition activePage={activePage}>
+                        <Home onNavigate={handleNavClick}/>
+                        <Iphone/>
+                        <Macbook/>
+                        <Watch/>
+                        <IMac/>
+                    </PageTransition>
                 </div>
             </div>
         </div>

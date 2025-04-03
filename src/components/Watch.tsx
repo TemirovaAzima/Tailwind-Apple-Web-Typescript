@@ -8,7 +8,7 @@ const Watch: React.FC = () => {
                 Which Apple Watch is right for you?
             </h1>
             <div className={`w-full flex justify-around`}>
-                {watchModels.map((watchModel:WatchModulesType) => (
+                {watchModels.map((watchModel: WatchModulesType) => (
                     <div className={`w-60 h-[430px] flex flex-col justify-around group `}>
                         <div key={Math.random()} className={`w-full h-64 overflow-hidden relative`}>
                             <img
@@ -32,11 +32,12 @@ const Watch: React.FC = () => {
                             {watchModel.price}
                         </a>
                         <div className={`md:text-sm text-xs text-gray-700 my-2`}>
-                            {watchModel.desc.map((item:string) => (
+                            {watchModel.desc.map((item: string) => (
                                 <span key={Math.random()} className={`block`}>{item}</span>
                             ))}
                         </div>
-                        <button className={`w-min hover:bg-blue-900 text-sm mt-4 p-1.5 cursor-pointer bg-blue-400 text-white rounded-full`}>
+                        <button
+                            className={`w-min hover:bg-blue-900 text-sm mt-4 p-1.5 cursor-pointer bg-blue-400 text-white rounded-full`}>
                             Shop
                         </button>
                     </div>

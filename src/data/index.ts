@@ -4,7 +4,8 @@ export interface NavItemsType {
     activeIcon: string;
     inactiveIcon: string;
 }
-export const navItems : NavItemsType[] = [
+
+export const navItems: NavItemsType[] = [
     {
         label: 'Home',
         icon: 'bx bx-home-alt-2',
@@ -42,11 +43,12 @@ export interface ItemsType {
     img: string;
     pageIndex: number;
 }
-export const items : ItemsType[]= [
-    { label: 'iPhone', img: 'images/iphone.jpg', pageIndex: 1 },
-    { label: 'MacBook', img: 'images/macbook.jpg', pageIndex: 2 },
-    { label: 'Smart Watch', img: 'images/watch.jpg', pageIndex: 3 },
-    { label: 'iMac', img: 'images/imac.png', pageIndex: 4 },
+
+export const items: ItemsType[] = [
+    {label: 'iPhone', img: 'images/iphone.jpg', pageIndex: 1},
+    {label: 'MacBook', img: 'images/macbook.jpg', pageIndex: 2},
+    {label: 'Smart Watch', img: 'images/watch.jpg', pageIndex: 3},
+    {label: 'iMac', img: 'images/imac.png', pageIndex: 4},
 ]
 
 export interface IphoneModelsType {
@@ -55,7 +57,8 @@ export interface IphoneModelsType {
     price: string;
     img: string;
 }
-export const iphoneModels:IphoneModelsType[] = [
+
+export const iphoneModels: IphoneModelsType[] = [
     {
         name: 'iPhone 16 Pro Max',
         description: 'The ultimate iPhone.',
@@ -86,18 +89,19 @@ export interface MacbookModelsType {
     price: string;
     img: string;
     colors: { label: string; bg: string; img: string }[];
-    specs:string[]
+    specs: string[]
     icon: string;
 }
-export const macbookModels:MacbookModelsType[] = [
+
+export const macbookModels: MacbookModelsType[] = [
     {
         chip: 'M2',
         price: 'From $999',
         img: 'images/macbook-air-midnight-m2.jpg',
         colors: [
-            { label: 'Space gray', bg: '#b2b5b8', img: 'images/macbook-air-spacegray-m2.jpg' },
-            { label: 'Gold', bg: '#f0e0d3', img: 'images/macbook-air-gold-m2.jpg' },
-            { label: 'Silver', bg: '#e0e2e1', img: 'images/macbook-air-silver-m2.jpg' },
+            {label: 'Space gray', bg: '#b2b5b8', img: 'images/macbook-air-spacegray-m2.jpg'},
+            {label: 'Gold', bg: '#f0e0d3', img: 'images/macbook-air-gold-m2.jpg'},
+            {label: 'Silver', bg: '#e0e2e1', img: 'images/macbook-air-silver-m2.jpg'},
         ],
         specs: ['8-Core CPU', '8-Core GPU', '16GB Unified Memory', '256GB SSD Storage'],
         icon: 'images/apple-m2-icon.png',
@@ -107,10 +111,10 @@ export const macbookModels:MacbookModelsType[] = [
         price: 'From $1,299',
         img: 'images/macbook-air-space-gray-m3.jpg',
         colors: [
-            { label: 'Midnight', bg: '#2e3641', img: 'images/macbook-air-midnight-m3.jpg' },
-            { label: 'Starlight', bg: '#f0e5d3', img: 'images/macbook-air-starlight-m3.jpg' },
-            { label: 'Space gray', bg: '#7d7e80', img: 'images/macbook-air-spacegray-m3.jpg' },
-            { label: 'Silver', bg: '#e3e4e6', img: 'images/macbook-air-silver-m3.jpg' },
+            {label: 'Midnight', bg: '#2e3641', img: 'images/macbook-air-midnight-m3.jpg'},
+            {label: 'Starlight', bg: '#f0e5d3', img: 'images/macbook-air-starlight-m3.jpg'},
+            {label: 'Space gray', bg: '#7d7e80', img: 'images/macbook-air-spacegray-m3.jpg'},
+            {label: 'Silver', bg: '#e3e4e6', img: 'images/macbook-air-silver-m3.jpg'},
         ],
         specs: ['8-Core CPU', '10-Core GPU', '24GB Unified Memory', '512GB SSD Storage'],
         icon: 'images/apple-m3-icon.png',
@@ -123,7 +127,8 @@ export interface WatchModulesType {
     price: string;
     desc: string[];
 }
-export const watchModels :WatchModulesType[] = [
+
+export const watchModels: WatchModulesType[] = [
     {
         imgs: ['images/watch10-side.png', 'images/watch10.png'],
         name: 'Apple Watch Series 10',
@@ -153,7 +158,8 @@ export interface ImacModelsType {
         back: string;
     }
 }
-export const imacModels: ImacModelsType[]= [
+
+export const imacModels: ImacModelsType[] = [
     {
         label: 'Green',
         bg: '#10505b',

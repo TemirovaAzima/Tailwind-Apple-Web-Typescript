@@ -1,14 +1,14 @@
 import React from 'react'
 import {iphoneModels, IphoneModelsType} from "../data";
 
-const Iphone:React.FC = () => {
+const Iphone: React.FC = () => {
     return (
         <div className={`w-full h-full flex flex-col items-center justify-around bg-white p-8`}>
             <h3 className={`2xl:text-4xl xl:text-3xl md:text-2xl font-semibold text-gray-800 mb-8`}>
                 Which Iphone is right for you?
             </h3>
             <div className={`flex justify-between w-full`}>
-                {iphoneModels.map((iphone:IphoneModelsType) => (
+                {iphoneModels.map((iphone: IphoneModelsType) => (
                     <div key={Math.random()} className={`flex flex-col items-center justify-between gap-y-2`}>
                         <img src={iphone.img}
                              alt={iphone.name}

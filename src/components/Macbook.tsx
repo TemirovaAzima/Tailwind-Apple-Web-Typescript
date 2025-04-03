@@ -13,7 +13,7 @@ const Macbook: React.FC = () => {
         setSelectedColor(0);
     }
     return (
-        <div className={`flex flex-col items-center justify-around bg-white p-3`}>
+        <div className={`flex h-full flex-col items-center justify-around bg-white p-3`}>
             <h1 className={`2xl:text-4xl xl:text-3xl md:text-2xl font-semibold text-gray-800 mb-3`}>
                 Choose your new MacBook Air
             </h1>
