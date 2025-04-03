@@ -144,7 +144,7 @@ export const watchModels :WatchModulesType[] = [
     },
 ]
 
-interface ImacModelsType {
+export interface ImacModelsType {
     label: string;
     bg: string;
     images: {
