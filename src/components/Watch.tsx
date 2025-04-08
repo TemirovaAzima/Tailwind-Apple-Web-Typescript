@@ -8,8 +8,9 @@ const Watch: React.FC = () => {
                 Which Apple Watch is right for you?
             </h1>
             <div className={`w-full flex justify-around`}>
-                {watchModels.map((watchModel: WatchModulesType) => (
-                    <div className={`w-60 h-[430px] flex flex-col justify-around group `}>
+                {watchModels.map((watchModel: WatchModulesType, index: number) => (
+                    <div
+                        className={`w-60 h-[430px] flex flex-col justify-around group ${index === 2 ? "hidden md:flex" : ''} `}>
                         <div key={Math.random()} className={`w-full h-64 overflow-hidden relative`}>
                             <img
                                 src={watchModel.imgs[0]}
