@@ -8,8 +8,9 @@ const Iphone: React.FC = () => {
                 Which Iphone is right for you?
             </h3>
             <div className={`flex justify-between w-full`}>
-                {iphoneModels.map((iphone: IphoneModelsType) => (
-                    <div key={Math.random()} className={`flex flex-col items-center justify-between gap-y-2`}>
+                {iphoneModels.map((iphone: IphoneModelsType, index: number) => (
+                    <div key={Math.random()}
+                         className={`flex flex-col items-center justify-between gap-y-2 ${index === 2 ? "hidden md:flex" : ''}`}>
                         <img src={iphone.img}
                              alt={iphone.name}
                              className={`2xl:w-72 lg:w-64 sm:w-48 md:h-64 sm:h-48 object-contain`}
