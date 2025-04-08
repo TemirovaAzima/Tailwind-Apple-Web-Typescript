@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import Controls from "./components/Controls.tsx";
 import Navbar from "./components/Navbar.tsx";
 import Watch from "./components/Watch.tsx";
@@ -11,9 +11,23 @@ import PageTransition from "./components/PageTransition.tsx";
 const App: React.FC = () => {
     const [frameZoom, setFrameZoom] = useState<boolean>(false);
     const [activePage, setActivePage] = useState<number>(0);
+    const [isLgScreen, setIsLgScreen] = useState<boolean>(window.innerWidth > 1024);
+
+    useEffect(() => {
+        const handleResize = ():void=> {
+            setIsLgScreen(window.innerWidth >= 1024);
+            if (window.innerWidth < 1024) {
+                setFrameZoom(true)
+            }
+        }
+        window.addEventListener('resize', handleResize)
+        return () => window.removeEventListener('resize', handleResize)
+    }, []);
 
     const toggleZoom = (): void => {
-        setFrameZoom(!frameZoom)
+        if (isLgScreen) {
+            setFrameZoom(!frameZoom)
+        }
     };
 
     const resetPage = (): void => {
@@ -22,6 +36,7 @@ const App: React.FC = () => {
     const handleNavClick = (pageIndex: number): void => {
         setActivePage(pageIndex)
     }
+
     return (
         <div className={"w-full h-screen grid place-items-center"}>
             <div className={` ${frameZoom ? 'min-w-[97vw] min-h-[97vh]' : 'min-w-[70vw] min-h-[85vh]'} w-[70vw] h-[85vh] max-w-[90vw] max-h-[90vh]
